@@ -1,0 +1,90 @@
+<div ng-controller="leadscontroller" ng-init="onload()">
+
+<h1 class="page_title">{{pagename}}</h1>
+
+<div class="container cent-cont">
+
+
+
+
+<div class="form-group col-md-3 col-xs-3">
+  <div class="row">
+<select class="form-control">
+<option>All Leads</option>
+<option>My Leads</option>
+<option>Unread Leads</option>
+</select>
+</div>
+</div>
+
+
+<div class="form-group col-md-3">
+
+<a href="#" class="alink">Create New View</a>
+</div>
+
+
+
+<div class="form-group col-md-3 pull-right">
+  <div class="row">
+
+<a href="#/leads/createEditLead" class="pull-right greenbtn btn"><i class="fa fa-plus" aria-hidden="true"></i> Create New Lead</a>
+</div>
+</div>
+
+
+
+
+
+<!-- Table -->
+<div class="tablescroll">
+					
+					 <div class="fade-in-up">
+
+						<table data-filter-control="false"
+							ng-repeat="lead in leads"
+							bs-table-control="lead.leadsBsTableControl"
+							ng-show="leadTable">
+							<thead>
+								<tr class="thead">
+								    <th data-field="" data-formatter="editFormatter" data-events="editEvent"></th>
+									<th data-field="firstName" data-sortable="true"  data-formatter="firstNameFormatter" data-events="firstNameEvent"></th>
+									<th data-field="lastName" data-sortable="true"></th>
+									<th data-field="email" data-sortable="true" data-sortable="true"  data-formatter="emailFormatter" data-events="emailEvent"></th>
+									<th data-field="phone" data-sortable="true"></th>
+									<th data-field="company" data-sortable="true"></th>
+									<th data-field="title" data-sortable="true"></th>
+									<th data-field="" data-formatter="operateFormatter"
+										data-events="operateEvents"></th>
+								</tr>
+							</thead>
+							<tbody>
+
+							</tbody>
+						</table>
+					 </div> 
+					<!--  End Table  -->
+            
+
+</div>
+
+
+<!-- END MAIN CONTENT -->
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+    
+    
+
+</div>

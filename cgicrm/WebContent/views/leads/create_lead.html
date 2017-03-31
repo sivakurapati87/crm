@@ -1,0 +1,465 @@
+<div ng-controller="createleadcontroller" ng-init="onload()">
+
+<h1 class="page_title">
+<a href="#">Lead</a> <i class="seperator  fa fa-angle-right" aria-hidden="true"></i>   Create/Edit Lead
+</h1>
+
+<div class="container cent-cont">
+
+ <form name="createleadForm" novalidate="" ng-submit="savelead()">
+
+
+<div class="pull-right" style="margin-top:-10px;">
+<button type="submit" button-id="save" class="greenbtn btn toppgbtn" ng-if="!cloneButton"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</a>
+<button type="submit" button-id="save" class="greenbtn btn toppgbtn" ng-if="cloneButton"><i class="fa fa-floppy-o" aria-hidden="true"></i> Clone</a>
+<button type="submit" button-id="saveNew" class="greenbtn btn toppgbtn" ng-if="saveNewButton==false"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save & New</a>
+<button type="button" ng-click="cancelButton()" class="greenbtn btn toppgbtn"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
+</div>
+
+
+
+<div growl></div>
+
+<div class="section_head"><i class="fa fa-angle-down" aria-hidden="true"></i> Basic Details</div>
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">First Name</label>  
+<div class="form-group col-md-2 noltpad" style="padding-right:6px;">
+<select class="form-control" ng-model="createlead.salutation">
+<option value="">None</option>
+<option value="Mr.">Mr.</option>
+<option value="Ms.">Ms.</option>
+<option value="Mrs.">Mrs.</option>
+<option value="Dr.">Dr.</option>
+<option value="Prof.">Prof.</option>
+</select>
+</div>
+<div class="form-group col-md-6 noltpad">
+  	<input type="text" placeholder="First Name" maxlength="250" class="form-control" ng-model="createlead.firstName">
+</div>
+</div>
+
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Last Name</label>  
+<div class="form-group col-md-8 noltpad">
+  	<input type="text" placeholder="Last Name" class="form-control" ng-model="createlead.lastName" required>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Company</label>  
+<div class="form-group col-md-8 noltpad">
+  	<input type="text" placeholder="Company Name" class="form-control" ng-model="createlead.company" required>
+</div>
+</div>
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Title</label>  
+<div class="form-group col-md-8 noltpad">
+  	<input type="text" placeholder="Title" class="form-control" ng-model="createlead.title">
+</div>
+</div>
+
+</div>
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Lead Source</label>  
+<div class="form-group col-md-8 noltpad">
+<select class="form-control" ng-model="createlead.leadsource">
+<option value="">None</option>
+<option value="Web">Web</option>
+<option value="Phone Inquiry">Phone Inquiry</option>
+<option value="Partner Referral">Partner Referral</option>
+<option value="Purchased List">Purchased List</option>
+<option value="Other">Other</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-6">
+<label class="col-md-3 control-label">Industry</label>  
+<div class="form-group col-md-8 noltpad">
+<select class="form-control" ng-model="createlead.industry">
+<option value="">All Leads</option>
+<option>All Leads</option>
+<option>My Leads</option>
+<option>Unread Leads</option>
+</select>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Annual Revenue</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Annual Revenue" class="form-control" ng-model="createlead.annual_revenue">
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Phone</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Phone" class="form-control" ng-model="createlead.phone">
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Mobile</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Mobile" class="form-control" ng-model="createlead.mobile">
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Fax</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Fax" class="form-control" ng-model="createlead.fax">
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Email</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="email" placeholder="Email" class="form-control" ng-model="createlead.email">
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Website</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Website" class="form-control" ng-model="createlead.website">
+</div>
+</div>
+
+
+</div>
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Lead Status</label>  
+<div class="form-group col-md-8 noltpad">
+<select class="form-control" ng-model="createlead.leadstatus" required>
+<option value="Open - Not Contacted">Open - Not Contacted</option>
+<option value="Working - Contacted">Working - Contacted</option>
+<option value="Closed - Converted">Closed - Converted</option>
+<option value="Closed - Not Converted">Closed - Not Converted</option>
+</select>
+</div>
+</div>
+
+<div class="col-md-6">
+<label class="col-md-3 control-label">Rating</label>  
+<div class="form-group col-md-8 noltpad">
+<select class="form-control" ng-model="createlead.rating">
+<option value="">None</option>
+<option value="Hot">Hot</option>
+<option value="Warm">Warm</option>
+<option value="Cold">Cold</option>
+</select>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">No. of Employees</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="No of Employees" class="form-control" ng-model="createlead.noOfEmp">
+</div>
+</div>
+
+</div>
+
+<div class="clearboth"></div>
+<br>
+
+
+
+
+
+<div class="section_head"><i class="fa fa-angle-down" aria-hidden="true"></i> Address Details</div>
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Street</label>  
+<div class="form-group col-md-8 noltpad">
+<textarea placeholder="Street Address" class="form-control spltxtarea" Rows="3" ng-model="createlead.street"></textarea>
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+<div class="col-md-12 noLRpad">
+  <label class="col-md-3 control-label">City</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="City" class="form-control" ng-model="createlead.city">
+</div>
+</div>
+
+<div class="col-md-12 noLRpad">
+  <label class="col-md-3 control-label">State/Province</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="State/Province" class="form-control" ng-model="createlead.state">
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Zip/Postal Code</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Zip/Postal Code" class="form-control" ng-model="createlead.postal">
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Country</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Country" class="form-control" ng-model="createlead.country">
+</div>
+</div>
+
+</div>
+
+
+
+<div class="clearboth"></div>
+<br>
+
+
+
+
+
+<div class="section_head"><i class="fa fa-angle-down" aria-hidden="true"></i> Additional Details</div>
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Product Interest</label>  
+<div class="form-group col-md-8 noltpad">
+<select class="form-control" ng-model="createlead.productInterest">
+<option value="">None</option>
+<option value="GC1000 series">GC1000 series</option>
+<option value="GC3000 series">GC3000 series</option>
+<option value="GC5000 series">GC5000 series</option>
+</select>
+</div>
+</div>
+
+
+
+<div class="col-md-6">
+  <label class="col-md-3 control-label">Current Generator(s)</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Current Generator" class="form-control" ng-model="createlead.currentGenerators">
+</div>
+</div>
+
+</div>
+
+
+
+
+
+<div class="col-md-12 row">
+
+<div class="col-md-6">
+
+<div class="col-md-12 noLRpad">
+  <label class="col-md-3 control-label">SIC Code</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="SIC Code" class="form-control" ng-model="createlead.sicCode">
+</div>
+</div>
+
+
+<div class="col-md-12 noLRpad">
+  <label class="col-md-3 control-label">Primary</label>  
+<div class="form-group col-md-8 noltpad">
+<select class="form-control" ng-model="createlead.primary">
+<option value="">None</option>
+<option value="No">No</option>
+<option value="Yes">Yes</option>
+</select>
+</div>
+</div>
+
+
+
+
+
+
+<div class="col-md-12 noLRpad">
+  <label class="col-md-3 control-label">No of Locations</label>  
+<div class="form-group col-md-8 noltpad">
+<input type="text" placeholder="Number of Locations" class="form-control" ng-model="createlead.noOfLocations">
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-6">
+
+
+  <label class="col-md-3 control-label">Description</label>  
+<div class="form-group col-md-8 noltpad">
+<textarea placeholder="Description" class="form-control spltxtarea01" Rows="3" ng-model="createlead.description"></textarea>
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-md-12 row">
+
+
+
+<!-- <div class="col-md-6">
+  <label class="col-md-3 control-label"></label>  
+<div class="form-group col-md-8 noltpad">
+<input type="checkbox" ng-model="createlead.assignRule"> Assign using active assignment rule
+</div>
+
+</div> -->
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="pull-right" style="margin-top:-10px;">
+<br>
+<button type="submit" button-id="save" class="greenbtn btn toppgbtn" ng-if="!cloneButton"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</a>
+<button type="submit" button-id="save" class="greenbtn btn toppgbtn" ng-if="cloneButton"><i class="fa fa-floppy-o" aria-hidden="true"></i> Clone</a>
+<button type="submit" button-id="saveNew" class="greenbtn btn toppgbtn" ng-if="saveNewButton==false"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save & New</a>
+<button type="button" ng-click="cancelButton()" class="greenbtn btn toppgbtn"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</a>
+</div>
+
+
+
+
+</form>
+
+</div>
+
+</div>

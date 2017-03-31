@@ -1,0 +1,80 @@
+<html ng-app="indexapp" ng-controller="homecontroller" ng-init="onload()">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="initial-scale=1">
+
+    
+<link href="js/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<link href="js/bootstrap/bootstrap-table.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+<link href="js/notification-growl/growl.css" rel="stylesheet" />
+<link rel="shortcut icon" href="favicon.ico" />
+ 
+ <script src="js/jquery/jquery.min.js" type="text/javascript"></script>
+ <script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/angular.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/angular-sanitize.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/angular-touch.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/angular-ui-router.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/ngStorage.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/jcs-auto-validate.min.js" type="text/javascript"></script>
+ <script src="js/angularjs/angular-block-ui.js" type="text/javascript"></script>
+ <script src="js/bootstrap/bootstrap-table.js" type="text/javascript"></script>
+ <script src="js/bootstrap/bootstrap-table-angular.js" type="text/javascript"></script>
+ 
+ 
+<script  src="js/constants.js" type="text/javascript"></script>
+<script  src="js/notification-growl/growl.js" type="text/javascript"></script>
+
+
+<script  src="js/modules/leads_module.js" type="text/javascript"></script>
+<script  src="js/modules/main_module.js" type="text/javascript"></script>
+<script  src="js/common/header.js" type="text/javascript"></script>
+<script  src="js/common/footer.js" type="text/javascript"></script>
+<script  src="js/modules/common_module.js" type="text/javascript"></script>
+<script  src="js/Dashboard/dashboard.js" type="text/javascript"></script>
+<script  src="js/leads/leads.js" type="text/javascript"></script>
+<script  src="js/leads/create_lead.js" type="text/javascript"></script>
+<script  src="js/leads/view_lead.js" type="text/javascript"></script>
+    
+    
+        
+  
+  
+ </head>
+<body>
+
+
+
+
+<!--  ************************************ HEADER SECTION STARTS HERE********************************************  -->
+<div class="myheader" data-ng-include="'views/common/header.html'" data-ng-controller="headercontroller" > </div>
+<!--  ************************************ HEADER SECTION ENDS HERE********************************************  -->
+
+
+
+
+
+
+<!--  ************************************ CONTENT SECTION STARTS HERE********************************************  -->
+<div class="bodycont" ui-view> </div>
+<!--  ************************************ CONTENT SECTION ENDS HERE********************************************  -->
+
+
+
+<br><br><br>
+
+
+<!--  ************************************ FOOTER SECTION STARTS HERE********************************************  -->
+<div class="myheader" data-ng-include="'views/common/footer.html'" data-ng-controller="headercontroller" > </div>
+<!--  ************************************ FOOTER SECTION ENDS HERE********************************************  -->
+
+
+</body>
+</html>

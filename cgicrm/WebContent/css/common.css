@@ -1,0 +1,458 @@
+body
+{
+	margin:0;
+	padding:0;
+	font-family:'verdana';
+}
+.mybtn
+{
+	margin:0;
+	padding:10px;
+}
+.mybtn i
+{
+	font-size:20px;
+}
+.profilepic
+{
+	width:30px;
+	height:30px;
+}
+.logoimg
+{
+	margin:6px 10px 6px 0px;
+	padding:0px;
+	background:url("../images/logo.png");
+	width:150px;
+	height:43px;
+}
+.profile-btn
+{
+	margin:6px 0px 0px 0px;
+	background-image:none!important;
+	border:0px solid #000000!important;
+	box-shadow:none!important;
+	
+}
+.profileimg img
+{
+	margin:0;
+	padding:0;
+	border-radius:50px;
+	border:1px solid #ffffff;
+	width:35px;
+	height:35px;
+}
+.caret
+{
+	color:#ffffff;
+}
+.cent-cont
+{
+	padding:10px;
+}
+.form-label
+{
+	font-weight: normal;;
+}
+textarea
+{
+	resize:none;
+}
+.splbtn
+{
+	margin-top:25px;
+}
+#searchtbl
+{
+	display: none;
+}
+.mytable thead tr th
+{
+	background-color:#337ab7;
+	color:#ffffff;
+	text-align:center;
+}
+.loginbtn
+{
+      
+  position: absolute;
+  margin: auto;
+  padding:0px;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 80px;
+  
+    }
+.loginlogo
+{
+	margin:-15px 0px 10px 0px;
+	padding:0;
+	text-align:center;
+}
+.dropdown-menu li a
+{
+	margin:0;
+	padding:12px 20px 12px 20px;
+	display: block;
+}
+
+.dateicon
+{
+	padding-top:9px;
+	padding-bottom:9px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+input[type="number"]
+{
+	-moz-appearance: textfield;
+}
+.money
+{
+	padding-left:28px;
+}
+.rupeeicon
+{
+	position:fixed;
+	top:35px;
+	left:32px;
+}
+
+.has-error .form-control
+{
+	border: 1px solid #ff0000;
+}
+
+.invaliduser
+{
+	color:#ffff00;
+	font-weight:bold;
+	text-align: center;
+	padding:0px 0px 10px 0px;
+	font-size: 20px;
+	display: block;
+}
+
+
+.bgcolor_2
+{
+	background-color:#728dab;
+	border-bottom:5px solid #c4d930;
+	
+}
+
+/*------------------ MENU STULES STARTS-------------------*/
+
+.menu
+{
+	margin:0;
+	padding:0;
+}
+.menu nav
+{
+	margin:0;
+	padding:0;
+}
+.menu nav a
+{
+	padding:17px 10px 17px 10px;
+	color:#ffffff;
+	display:inline-block;
+}
+.menu nav a:hover
+{
+	background-color:#c4d930;
+	color:#000000;
+	text-decoration:none;
+}
+
+.menu nav a.active
+{
+	background-color:#c4d930;
+	color:#000000;
+	text-decoration:none;
+}
+
+/*------------------ MENU STULES ENDS-------------------*/
+
+
+
+
+/*--*************** PAGE COMMON STYLES STARTS***************--*/
+.seperator
+{
+	
+	color:#999999;
+}
+.footer
+{
+	margin-top:25px;
+    background-color: #f2f2f2;
+    padding: 8px;
+    box-shadow: 0px 0px 10px #222222;
+    color: #666666;
+    font-size: 12px;
+    text-align:center;
+}
+.bodycont
+{
+	margin-top:54px;
+}
+.page_title
+{
+	padding:20px 10px 20px 70px;
+	margin:0px 0px 0px 0px;
+	font-size:20px;
+}
+.alink
+{
+	color:#f08377;
+	display:inline-block;
+	padding-top:10px;
+}
+
+.section_head
+{
+	font-size: 16px;
+	padding: 0px 0px 3px 10px;
+	border-bottom: 1px solid #FE7922;
+	margin: 0px 0px 25px 0px;
+	color: #555555;
+}
+.section_head i
+{
+	font-size:25px!important;
+	color:#FE7922;
+}
+.clearboth
+{
+	clear:both;
+}
+.noLRpad
+{
+	padding-left:0px;
+	padding-right:0px;
+}
+.toppgbtn
+{
+	margin-left:5px;
+}
+/*--**************** PAGE COMMON STYLES ENDS***************--*/
+
+
+
+
+
+
+
+/*--**************************TABLE STYLES STARTS*****************************--*/
+.table tbody tr td a
+{
+	cursor:hand;
+	cursor:pointer;
+}
+.bootstrap-table .table > thead > tr > th
+{
+	background-color:#738dac;
+	border:0px solid #000000;
+	vertical-align:middle;
+}
+.fixed-table-container tbody td
+{
+	border:0px solid #000000;
+}
+
+..bootstrap-table .table
+{
+	border:0px solid #000000;
+}
+.fixed-table-container
+{
+	border:0px solid #000000;
+}
+.table-striped > tbody > tr
+{
+	background-color:#ffffff!important;
+}
+
+.table-striped > tbody > tr:hover
+{
+	background:rgba(196,217,48, 0.3)!important;
+}
+
+.fixed-table-body
+{
+	height:auto;
+}
+
+.tablescroll
+{
+	margin:0;
+	padding:0;
+	width:100%;
+	overflow:auto;
+}
+.rowcheckbox
+{
+	border:10px solid #ff0000;
+}
+.table .tbledit
+{
+	color:#999999;
+}
+.table .tbledit:hover
+{
+	color:#000000;
+	cursor:hand;
+	cursor:pointer;
+}
+.table .tbl_lnk
+{
+	color:#f08377;
+}
+.table .thead
+{
+	background-color:#738dac;
+	color:#ffffff;
+}
+.table tbody tr:hover
+{
+	background:rgba(196,217,48, 0.2);
+}
+
+.table tr td, .table tr th
+{
+	font-size:12px;
+}
+.table .tbl_redicon
+{
+	color:#f08377;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus
+{
+	background-color:#728dab;
+	border-color:#728dab;
+}
+/*--**************************TABLE STYLES STARTS*****************************--*/
+
+
+
+
+
+/*--************************** FORM ELEMENTS STYLES STARTS ********************--*/
+.viewlbl
+{
+	text-align:left!important;
+	font-weight:bold!important;
+}
+input.form-control, select.form-control
+{
+	height:28px!important;
+	font-size:12px;
+}
+.spltxtarea
+{
+	height:66px!important;
+}
+.spltxtarea01
+{
+	height:102px!important;
+}
+
+.control-label
+{
+	font-weight:normal;
+	text-align:right;
+	padding-left:0px;
+	font-size:12px;
+}
+.noltpad
+{
+	padding-left:0px;
+}
+.greenbtn
+{
+	background-color:#c4d930;
+	color:#000000;
+	font-size:14px;
+}
+
+.greenbtn:hover
+{
+	background-color:#d9e77a;
+}
+
+.form-group
+{
+	Margin-bottom:10px;
+}
+input, select
+{
+	box-shadow:none!important;
+}
+input:required, select:required
+{
+	border-left:4px solid #ff0000!important;
+}
+
+/*--************************** FORM ELEMENTS STYLES ENDS ********************--*/
+
+
+
+
+
+
+
+/* .fixed-table-pagination .pagination-detail .page-list .dropdown .dropdown-menu
+{
+    position: absolute;
+    top: -100;
+}
+ */
+ 
+ 
+ 
+ 
+ .pagination-detail
+ {
+ font-size:12px;
+ }
+ .pagination-detail .page-list .dropdown .dropdown-toggle
+ {
+ padding:3px;
+ font-size:12px;
+ 
+ }
+ 
+ .pagination-detail .page-list .dropdown .dropdown-toggle .caret
+{
+color:#000000;
+}
+
+.pagination li a
+{
+ padding:5px 10px 5px 10px!important;
+ font-size:12px;
+}
+.pagination, .pagination-detail
+{
+ margin-bottom: 0px!important;
+}
+.page-list .dropdown .btn-default
+{
+background-color:#ffffff!important;
+background-position:0 100px;
+border:1px solid #728dab;
+}
+
+.has-feedback .form-control
+{
+padding-right:0px;
+}

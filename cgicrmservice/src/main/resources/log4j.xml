@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" [
+  <!ENTITY loglocation "/cgicrmLogs">
+]>
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="true">
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<param name="Threshold" value="info" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %-5p [%c{1}] %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="error" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="Threshold" value="error" />
+		<param name="DatePattern" value="'.'yyyy_MM_dd'.log'" />
+		<param name="File" value="&loglocation;/cgicrmError.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="info" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="Threshold" value="INFO" />
+		<param name="DatePattern" value="'.'yyyy_MM_dd'.log'" />
+		<param name="File" value="&loglocation;/cgicrmInfo.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+
+	<category name="com.cgi.crm">
+		<priority value="info" />
+	</category>
+
+
+	<root>
+		<level value="error" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="error" />
+		<appender-ref ref="info" />
+	</root>
+
+
+</log4j:configuration>
